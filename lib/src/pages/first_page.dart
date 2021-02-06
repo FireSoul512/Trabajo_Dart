@@ -19,7 +19,7 @@ class First_Page extends StatelessWidget{
           },
         ),
         backgroundColor: Color.fromRGBO(240, 94, 100, 1),
-        title: Text("new page 2"),
+        title: Text("Usuario"),
       ),
       body: Center(
         child: Column(

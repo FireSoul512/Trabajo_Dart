@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trabajo2/src/pages/first_page.dart';
 import 'package:trabajo2/src/pages/info_developer.dart';
+import 'package:trabajo2/src/pages/list_page.dart';
 import 'package:toast/toast.dart';
 
 
@@ -58,7 +58,7 @@ class NewPage extends StatelessWidget {
                     Toast.show("Los campos estan vacios", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
                   } else if(password == user){
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => First_Page(user)
+                      builder: (context) => List_Page()
                     ));
                   } else {
                     Toast.show("El usuario y la contraseña no coinsiden", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
@@ -71,6 +71,7 @@ class NewPage extends StatelessWidget {
         
       ),
       bottomNavigationBar: BottomAppBar(
+        color: Color.fromRGBO(249, 246, 239, 1),
         child: RaisedButton(
           color: Color.fromRGBO(42, 200, 194, 1),
           textColor: Colors.white,
