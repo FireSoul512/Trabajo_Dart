@@ -52,7 +52,6 @@ class NewPage extends StatelessWidget {
                     fontSize: 20.0
                   ),
                 ),
-
                 onPressed: (){
                   if (password == "" && user == ""){
                     Toast.show("Los campos estan vacios", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
@@ -64,25 +63,28 @@ class NewPage extends StatelessWidget {
                     Toast.show("El usuario y la contraseña no coinsiden", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
                   }
                 },
-              )
+              ),
+              SizedBox(height: 20),
+              RaisedButton(
+                color: Color.fromRGBO(42, 200, 194, 1),
+                textColor: Colors.white,
+                shape: StadiumBorder(),
+                child: Text(
+                  "Info",
+                  style: TextStyle(
+                    fontSize: 20.0
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Info_Developer(),
+                  ));
+                },
+              ),
             ],
           ),
         ),
         
-      ),
-      bottomNavigationBar: BottomAppBar(
-        color: Color.fromRGBO(249, 246, 239, 1),
-        child: RaisedButton(
-          color: Color.fromRGBO(42, 200, 194, 1),
-          textColor: Colors.white,
-          shape: StadiumBorder(),
-          child: Text("Info"),
-          onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => Info_Developer(),
-            ));
-          },
-        ),
       ),
     );
   }
